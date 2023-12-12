@@ -1,0 +1,154 @@
+projectDir:
+  /ext3/TW/project/OA_eQTL/ATAC_decipher # all output files will write into this directory
+
+softwarePath:
+  bowtie2: /home/TW/anaconda3/bin/bowtie2
+  samtools: /home/TW/anaconda3/bin/samtools
+  picard: /home/TW/anaconda3/bin/picard
+  MACS2: /home/TW/anaconda3/envs/macs2.7/bin/macs2
+  bedops: /home/TW/biosoft/bin/bedops
+  bedtools: /home/TW/anaconda3/bin/bedtools
+  SNPsplit_genome_preparation: /home/TW/biosoft/SNPsplit-0.6.0/SNPsplit_genome_preparation
+  TOBIAS: /home/TW/anaconda3/envs/TOBIAS/bin/TOBIAS
+  snp2h5: /home/TW/biosoft/WASP-master/snp2h5/snp2h5
+  find_intersecting_snps_modified: /home/TW/biosoft/WASP-master/mapping/find_intersecting_snps_modified.py
+  filter_remapped_reads: /home/TW/biosoft/WASP-master/mapping/filter_remapped_reads.py
+  gatk: /home/TW/biosoft/gatk-4.1.9.0/gatk
+  vcftools: /home/TW/anaconda3/envs/vcftools/bin/vcftools
+  tabix: /home/TW/anaconda3/bin/tabix
+  bcftools: /home/TW/anaconda3/envs/vcftools/bin/bcftools
+
+bowtie2IndexPrefix:
+  /home/TW/data/genome/sequence_and_index/hg19
+
+Threads:
+  bowtie2: 10
+  samtools: 10
+  produceSnpFiles: 40 # recommend use all threads of your machine
+  TOBIAS: 30
+
+
+# for ATAC data alignmetn and peak calling
+sampleCount:
+  2 # the number of samples that a peak should presented
+
+regularExpressionOfSampleNames:
+  "'.*ATAC.*'"
+
+samples:
+  degraded_1_ATAC:
+  degraded_2_ATAC:
+  degraded_3_ATAC:
+  degraded_4_ATAC:
+  degraded_5_ATAC:
+  degraded_6_ATAC:
+  degraded_7_ATAC:
+  degraded_8_ATAC:
+  normal_1_ATAC:
+  normal_2_ATAC:
+  normal_3_ATAC:
+  normal_4_ATAC:
+  normal_5_ATAC:
+  normal_6_ATAC:
+  normal_7_ATAC:
+  normal_8_ATAC:
+
+fastqFiles:
+  degraded_1_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_1_ATAC_1.fastq.gz
+  degraded_1_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_1_ATAC_2.fastq.gz
+  degraded_2_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_2_ATAC_1.fastq.gz
+  degraded_2_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_2_ATAC_2.fastq.gz
+  degraded_3_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_3_ATAC_1.fastq.gz
+  degraded_3_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_3_ATAC_2.fastq.gz
+  degraded_4_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_4_ATAC_1.fastq.gz
+  degraded_4_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_4_ATAC_2.fastq.gz
+  degraded_5_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_5_ATAC_1.fastq.gz
+  degraded_5_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_5_ATAC_2.fastq.gz
+  degraded_6_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_6_ATAC_1.fastq.gz
+  degraded_6_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_6_ATAC_2.fastq.gz
+  degraded_7_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_7_ATAC_1.fastq.gz
+  degraded_7_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_7_ATAC_2.fastq.gz
+  degraded_8_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_8_ATAC_1.fastq.gz
+  degraded_8_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/degraded_8_ATAC_2.fastq.gz
+  normal_1_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_1_ATAC_1.fastq.gz
+  normal_1_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_1_ATAC_2.fastq.gz
+  normal_2_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_2_ATAC_1.fastq.gz
+  normal_2_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_2_ATAC_2.fastq.gz
+  normal_3_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_3_ATAC_1.fastq.gz
+  normal_3_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_3_ATAC_2.fastq.gz
+  normal_4_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_4_ATAC_1.fastq.gz
+  normal_4_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_4_ATAC_2.fastq.gz
+  normal_5_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_5_ATAC_1.fastq.gz
+  normal_5_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_5_ATAC_2.fastq.gz
+  normal_6_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_6_ATAC_1.fastq.gz
+  normal_6_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_6_ATAC_2.fastq.gz
+  normal_7_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_7_ATAC_1.fastq.gz
+  normal_7_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_7_ATAC_2.fastq.gz
+  normal_8_ATAC_1: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_8_ATAC_1.fastq.gz
+  normal_8_ATAC_2: /ext3/TW/project/OA_eQTL/epigenetics/fastq_files/normal_8_ATAC_2.fastq.gz
+
+
+# for footprint analysis
+geneExpressionFile: # the first column is the gene symbol, the second column is the expression value
+  /ext3/TW/project/OA_eQTL/scripts/ATAC_decipher/annoFiles/gene_median_expression_value.txt
+
+expressionThreshold:
+  1
+
+motifFile:
+  # jaspar: /ext3/TW/project/OA_eQTL/scripts/ATAC_decipher/annoFiles/JASPAR2022_CORE_vertebrates_non-redundant_pfms_jaspar.txt
+  # HOCOMOCO: /ext3/TW/project/OA_eQTL/scripts/ATAC_decipher/annoFiles/HOCOMOCOv11_core_HUMAN_mono_jaspar_format.tfName.txt
+  jaspar: annoFiles/JASPAR2022_CORE_vertebrates_non-redundant_pfms_jaspar.txt
+  HOCOMOCO: annoFiles/HOCOMOCOv11_core_HUMAN_mono_jaspar_format.tfName.txt
+  jaspar_IC: annoFiles/JASPAR2022_CORE_vertebrates_non-redundant_pfms_jaspar.txt.information_content
+  HOCOMOCO_IC: annoFiles/HOCOMOCOv11_core_HUMAN_mono_jaspar_format.tfName.txt.information_content
+
+referenceGenomeFastaFile:
+  /home/TW/data/genome/sequence_and_index/hg19.fa # with 'chr' in chromosome names
+
+referenceGenomeFastaFileDir:
+  /home/TW/data/genome/sequence_and_index/hg19_nMasked # this dir contain a reference genome sequence withou 'chr' in chromosome names
+
+referenceGenomeFastaFilePrefix:
+  hg19
+
+bimFile:
+  /ext3/TW/project/OA_eQTL/eQTL-cis/01_eqtlInputData/OA.TOP.imputed.merged.filtered.DC.bim # plink bim file format
+
+genomeBlackList:
+  /home/TW/data/genome/annotation/hg19-blacklist.v2.bed
+
+geneName2id_anno_file: # the first column is the ensemble id and the second column is the gene symbol
+  annoFiles/geneName2ID.txt
+
+variantsBedFile:
+  annoFiles/OA.DC.eQTL.allpairs.txt.anno.significant.bed
+
+motifDisruptionThreshold:
+  information_content_of_position: 0.5
+  frequency_diff_of_two_allele: 0.3
+
+expressionBedFile:
+  annoFiles/OA_DC.expression.bed
+
+covariateFile:
+  annoFiles/OA.DC.merged.covariants
+
+sampleList:
+  annoFiles/OA.DC.sampleList
+
+# for allele-specific open chromatin SNPs
+chromosomeLengthFile:
+    /home/TW/biosoft/WASP-master/examples/example_data/chromInfo.hg19.txt
+
+vcfFilesDir:
+  /home/TW/data/1000-genome/EAS
+
+# for gatk resouse data
+gatk_resource:
+  gatk_ref_genome: /home/TW/data/GATK_Resource_bundle/hg19/ucsc.hg19.fasta
+  dbsnp_vcf_file: /home/TW/data/GATK_Resource_bundle/hg19/dbsnp_138.hg19.vcf
+  gold_standard_Indel: /home/TW/data/GATK_Resource_bundle/hg19/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf
+  hampam_known: /home/TW/data/GATK_Resource_bundle/hg19/hapmap_3.3.hg19.sites.vcf
+  genome_1000_omni: /home/TW/data/GATK_Resource_bundle/hg19/1000G_omni2.5.hg19.sites.vcf
+  high_confidence: /home/TW/data/GATK_Resource_bundle/hg19/1000G_phase1.snps.high_confidence.hg19.sites.vcf

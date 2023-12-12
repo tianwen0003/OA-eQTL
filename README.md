@@ -1,2 +1,2 @@
 # OA-eQTL
-code used for OA-eQTL our project
+This repository contains the codes used for our OA-eQTL project
