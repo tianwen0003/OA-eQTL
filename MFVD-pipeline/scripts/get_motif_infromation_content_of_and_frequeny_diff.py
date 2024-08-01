@@ -39,7 +39,7 @@ def loadMotif(tfDatabase):
     return motif2info
 
 
-work_dir = "/ext3/TW/project/OA_eQTL/tf_regulation/04_tf_eVariant_interaction_without_cell_fraction/02_eVariant_footprint_overlap"
+work_dir = snakemake.params[0]
 letterTransfer = {"A":"T", "T":"A", "C":"G", "G":"C"}
 
 #----extract infromation content of tfieQTL significant variant----#
