@@ -46,4 +46,4 @@ snakemake --use-conda -s MFVD.snakefile
 	6. ***interactP***: Pvalue of interaction term in regression model
 
 ## Workflow test
-Users can download the ATAC-seq data (GSE108301) we used in our paper that deposite in bioRxiv 'https://www.biorxiv.org/content/10.1101/2024.06.11.598401v2.article-metrics' to test the workflow. It will cost several days to get the all results when using 16 ATAC-seq data. 
+Users can download the ATAC-seq data (GSE108301) we used in our paper that deposite in bioRxiv 'https://www.biorxiv.org/content/10.1101/2024.06.11.598401v2' to test the workflow. It will cost several days to get the all results when using 16 ATAC-seq data. 
