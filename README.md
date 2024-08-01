@@ -17,7 +17,7 @@ The `config.yaml` file include three types of parameters to set
 2. Parameters for some analysis steps
 3. Input files path
    1. Users can get clear insight of the format for the most of required input data by scaning the example `config.yaml` file, such as fastq files of ATAC-seq data, fasta format of reference genome file
-   2. For some custom input file, we provided example file in `example_data` directory
+   2. For some custom input file, we provided example file in `annoFiles` directory
    
 ## Run workflow
 After preparing all input data and correctely set values in `config.yaml` file, users can run the analysis workflow in a very easy way:
