@@ -44,3 +44,6 @@ snakemake --use-conda -s MFVD.snakefile
 	4. ***target_name***: Gene symbol of eGene corresponding to `SNP`
 	5. ***SNP***: eSNP id
 	6. ***interactP***: Pvalue of interaction term in regression model
+
+## Workflow test
+Users can download the ATAC-seq data (GSE108301) we used in our paper that deposite in bioRxiv 'https://www.biorxiv.org/content/10.1101/2024.06.11.598401v2.article-metrics' to test the workflow. It will cost several days to get the all results when using 16 ATAC-seq data. 
